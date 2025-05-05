@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <title>Assignment 2 Dogs Page</title>
+        <link rel ="stylesheet" href = "Assignment2.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-slider/1.0.0/simpleslider.min.js"></script>
+        <script src = "Dogs.js" defer></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+        <script src = "audio.js" ></script>
+
+
+
+    </head>
+
+    <body>
+        <!-- Header Section -->
+        <header id ="bar">
+            <h1>Inst377 - Activities</h1>
+
+        </header>
+
+         <!-- Navigation Section -->
+         <nav id="main-nav">
+            <ul>
+                <a href = "HomePage.html">
+                <li>Home</li></a>
+                <a href = "Stocks.html">
+                <li>Stocks</li></a>
+                <a href = "Dogs.html">
+                <li>Dogs</li></a>
+            </ul>
+        </nav>
+
+        <!-- Main Section -->
+         <h1>Doggos! &#128054</h1>
+
+         <!-- Dog Slider Section -->
+        <div data-simple-slider id="dogDiv"></div>
+        
+        <!-- Dog Facts Section -->
+        <div id="dogButtons"></div>
+        <div id="dogDescription" style="display:none"></div>
+
+
+        <!-- Audio Section -->
+         
+        <div class = "speech-box">
+            <div class = "speech-text">
+                <h1>In this web page there are options to Navigate using Audio!</h1>
+                <p>Ensure your Mic is enabled to be able to use this feature <br>
+                    <ul>
+                       <li>Navigate to a Different Page</li> 
+                            <ul>
+                                <li> Say: Navigate to "page" </li>
+                            </ul>
+                        <li>Change the Page Color</li>
+                            <ul>
+                                <li>Say: Change the color to "color"</li>
+                            </ul>                      
+                        <li>Say Hello Back to you!</li>
+                            <ul>
+                                <li>Say: Hello</li>
+                            </ul>
+                        <li>Lookup a Dog Breed</li>
+                            <ul>
+                                <li>Say: Load "dog breed"</li>
+                            </ul>
+
+                    </ul>
+                </p>
+            </div>
+            
+            <div class="audio-buttons">
+                <button class="on button" onclick = "annyang.start()">Turn On Listening</button>
+                <button class="off button" onclick = "annyang.abort()">Turn Off Listening</button>
+            </div>
+
+        </div>
+
+    </body>
+
+
+
+</html>

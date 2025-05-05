@@ -1,0 +1,114 @@
+<html>
+    <head>
+        <title>Assignment 2 Stocks Page</title>
+        <link rel ="stylesheet" href = "Assignment2.css">
+        <script src = "https://cdn.jsdelivr.net/npm/chart.js" defer ></script>
+        <script src = "Stocks.js" defer></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+        <script src = "audio.js" ></script>
+
+        
+
+    </head>
+
+    <body>
+        <!-- Header Section -->
+        <header id ="bar">
+            <h1>Inst377 - Activities</h1>
+
+        </header>
+
+         <!-- Navigation Section -->
+         <nav id="main-nav">
+            <ul>
+                <a href = "HomePage.html">
+                <li>Home</li></a>
+                <a href = "Stocks.html">
+                <li>Stocks</li></a>
+                <a href = "Dogs.html">
+                <li>Dogs</li></a>
+            </ul>
+        </nav>
+
+        <!-- Stock Search Section -->
+         <h1>Let's chart some stocks!</h1>
+
+         <input type= "text" id ="stocks" maxlength="5" required>
+         <br>
+
+         <label for = "date"></label>
+         <select name = "date" id ="date">
+            <option value= "30Days">30 Days</option>
+            <option value= "60Days">60 Days</option>
+            <option value= "90Days">90 Days</option>
+         </select>
+
+         <br>
+         <br>
+         <button onclick = "fetchStock()" id="lookup" class="lookup" > Lookup!</button>
+
+         <div id = "chartDiv">
+            <canvas id = "myChart"></canvas>
+
+         </div>
+
+
+
+        <!-- Top Stocks Section -->
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Ticker</th>
+                    <th>Comment Count</th>
+                    <th>Sentiment</th>
+                </tr>
+            </thead>
+            <tbody id="topStocks"></tbody>
+        </table>
+        
+        
+        
+        
+        <!-- Audio Section -->
+
+        <div class = "speech-box">
+            <div class = "speech-text">
+                <h1>In this web page there are options to Navigate using Audio!</h1>
+                <p>Ensure your Mic is enabled to be able to use this feature <br>
+                    <ul>
+                       <li>Navigate to a Different Page</li> 
+                            <ul>
+                                <li> Say: Navigate to "page" </li>
+                            </ul>
+                        <li>Change the Page Color</li>
+                            <ul>
+                                <li>Say: Change the color to "color"</li>
+                            </ul>                      
+                        <li>Say Hello Back to you!</li>
+                            <ul>
+                                <li>Say: Hello</li>
+                            </ul>
+                        <li>Lookup a Stock</li>
+                            <ul>
+                                <li>Say: Lookup "stock"</li>
+                                <li>Example: Lookup MSFT</li>
+                            </ul>
+
+                    </ul>
+                </p>
+            </div>
+            
+            <div class="audio-buttons">
+                <button class="on button" onclick = "annyang.start()">Turn On Listening</button>
+                <button class="off button" onclick = "annyang.abort()">Turn Off Listening</button>
+
+            </div>
+
+        </div>
+
+    </body>
+
+
+
+</html>
